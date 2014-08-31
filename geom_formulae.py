@@ -1,12 +1,10 @@
-
 from numpy import *
 from numbers import Number
 import math
 from math import sqrt
-#======================= problem 1 ============================
 
 
-def volume_ellipsoid(a, b, c: Number) -> Number:
+def volume_ellipsoid(length_x-axis, length_y-axis, length_z-axis):
     """
     Find the volume any ellipsoid with all its axises are given.
 
@@ -21,10 +19,7 @@ def volume_ellipsoid(a, b, c: Number) -> Number:
     """
     volume = 4*pi*a*b*c/3
     return volume
-#print(volume_ellipsoid(21, 15, 2))
- #======================== end of problem 1 ======================
-
-#================= problem 2 ===============================
+    # print(volume_ellipsoid(21, 15, 2))
 
 
 def circle_perimeter(radius: Number) -> Number:
@@ -38,15 +33,13 @@ def circle_perimeter(radius: Number) -> Number:
     """
     perimeter = 2*pi*radius
     return perimeter
-#print(circle_perimeter(3))
-#=================== end of problem 2 ======================
-
-#=================== problem 3 ============================
+# print(circle_perimeter(3))
 
 
-def perimeter_triangle(side1, side2, side3 : Number) -> Number:
+def perimeter_triangle(side1, side2, side3: Number) -> Number:
     """
-    Calculate the area of any triangle given its three sides side1,side2 and side3.
+    Calculate the area of any triangle given its three sides side1,side2
+    and side3.
 
     @param side1: the first side of the triangle.
     @param side2: the second side of the triangle.
@@ -57,10 +50,7 @@ def perimeter_triangle(side1, side2, side3 : Number) -> Number:
     """
     perimeter = side1+side2+side3
     return perimeter
-#print(perimeter_triangle(3, 4, 6))
-#======================== end of problem 3 ===========================
-
-#======================== begining problem 4 ==========================
+# print(perimeter_triangle(3, 4, 6))= 13
 
 
 def area_triangle(a, b, c: Number) -> Number:
@@ -70,22 +60,20 @@ def area_triangle(a, b, c: Number) -> Number:
     @param a: the first side of the triangle.
     @param b: the second side of the triangle.
     @param c: the third side of the triangle.
-    @return: the area of the triangle(area = math.sqrt((a+b+c)/2.0*(b+c-a)/2.0*(a+c-b)/2.0*(a+b-c)/2.0))
+    @return: the area of the triangle
+    (area = math.sqrt((a+b+c)/2.0*(b+c-a)/2.0*(a+c-b)/2.0*(a+b-c)/2.0))
     >>> area_triangle(10, 2, 9)
     8.181534085976786
     """
     area = math.sqrt((a+b+c)/2.0*(b+c-a)/2.0*(a+c-b)/2.0*(a+b-c)/2.0)
     return area
-#print(area_triangle(10, 2, 9))
- #========================= end of problem 4 ==============================================
-
- #========================= begining problem 5 ============================================
+# print(area_triangle(10, 2, 9))
 
 
 def area_regularpolygon(n, s, r: Number) -> Number:
     """
-    Calculate the area of a regular polygon given the information number of sides,side length and apothem.
-
+    Calculate the area of a regular polygon given the information number
+    of sides,side length and apothem.
     @param n: the number of sides of a regular polygon.
     @param s: the length of one side of the polygon.
     @param r: the apothem(the radius of the inscribed circle)
@@ -95,10 +83,7 @@ def area_regularpolygon(n, s, r: Number) -> Number:
     """
     area = n*s*r/2.0
     return area
-#print(area_regularpolygon(12, 6, 2))
-#================================= end of problem 5 ===========================================
-
-#================================= begining of problem 6 ==================================
+# print(area_regularpolygon(12, 6, 2))
 
 
 def volume_sphere(r: Number) -> Number:
@@ -112,10 +97,7 @@ def volume_sphere(r: Number) -> Number:
     """
     volume = 4*pi*r**3/3
     return volume
-#print(volume_sphere(10))
-#============================== end of problem 6 ===========================================
-
-#============================= begining of problem 7 =======================================
+# print(volume_sphere(10))
 
 
 def volume_pyramid(basearea, heigth: Number) -> Number:
@@ -131,10 +113,7 @@ def volume_pyramid(basearea, heigth: Number) -> Number:
     """
     volume = basearea*heigth/3
     return volume
-#print(volume_pyramid(4,8))
-#================================ end of problem 7 =========================================
-
-#=============================== begining of problem 8 =====================================
+# print(volume_pyramid(4,8))
 
 
 def lateralarea_prism(p, h: Number) -> Number:
@@ -149,10 +128,7 @@ def lateralarea_prism(p, h: Number) -> Number:
     """
     lateral = p*h
     return lateral
-#print(lateralarea_prism(10, 5))
-#================================== end of problem 8 =====================================
-
-#================================== begining of problem 9 =================================
+# print(lateralarea_prism(10, 5))
 
 
 def volume_cube(l, w, h: Number) -> Number:
@@ -168,10 +144,7 @@ def volume_cube(l, w, h: Number) -> Number:
     """
     volume = l*w*h
     return volume
-#print(volume_cube(4, 5, 6))
-#============================= end of problem 9 =============================================
-
-#================================== begining of problem 10 =====================================
+# print(volume_cube(4, 5, 6))
 
 
 def volume_frustumcone(R, r, h: Number) -> Number:
@@ -187,13 +160,10 @@ def volume_frustumcone(R, r, h: Number) -> Number:
     """
     volume = pi*h*(R**2+R*r+r**2)/3
     return volume
-#print(volume_frustumcone(4, 2, 10))
-#================================== end of problem 10 ==========================================
-
-#================================== begining of problem 11 ====================================
+# print(volume_frustumcone(4, 2, 10))
 
 
-def area_rhom(b, a: Number) ->Number:
+def area_rhom(b, a: Number) -> Number:
     """
     Calculate the area of a rhombus given its base length and heigth.
 
@@ -205,10 +175,7 @@ def area_rhom(b, a: Number) ->Number:
     """
     area = b*a
     return area
-#print(area_rhom(10, 2))
-#================================== end of problem 11 ====================================
-
-#================================== begining of problem 12 ===============================
+# print(area_rhom(10, 2))
 
 
 def area_rhombus(s, theta) -> Number:
@@ -223,10 +190,7 @@ def area_rhombus(s, theta) -> Number:
     """
     area = sin(theta)*(s**2)
     return area
-#print(area_rhombus(2, pi/2))
-#====================================== end of problem 12 ===============================
-
-#====================================== begining of problem 13 ==========================
+# print(area_rhombus(2, pi/2))
 
 
 def area_rhombus(b=None, a=None, d1=None, d2=None, s=None, theta=None):
@@ -254,11 +218,9 @@ def area_rhombus(b=None, a=None, d1=None, d2=None, s=None, theta=None):
     else:
         area = (s**2)*sin(theta)
         return area
-#print(area_rhombus(b=4, a=7,d1=None, d2=None, s=None, theta=None ))
-#print(area_rhombus(b=None, a=None, d1=3, d2=4, s=None, theta=None))
-#print(area_rhombus(b=None, a=None, d1=None, d2=None, s=2, theta=pi/2))
-#======================================== end of problem 13 =================================
-#========================================= begining of problem 14 ============================
+# rint(area_rhombus(b=4, a=7,d1=None, d2=None, s=None, theta=None ))
+# print(area_rhombus(b=None, a=None, d1=3, d2=4, s=None, theta=None))
+# print(area_rhombus(b=None, a=None, d1=None, d2=None, s=2, theta=pi/2))
 
 
 def distance_points(x1, y1, x2, y2: Number) -> Number:
@@ -278,10 +240,6 @@ def distance_points(x1, y1, x2, y2: Number) -> Number:
     distance = math.sqrt(d1+d2)
     return distance
 print(distance_points(0, 0, 4, 0))
-
-#=================================== end of problem 14 ==============================
-
-#======================================= begining of problem 15 ===================
 
 
 def distance_points(x1, y1, z1, x2, y2, z2: Number) -> Number:
@@ -303,5 +261,4 @@ def distance_points(x1, y1, z1, x2, y2, z2: Number) -> Number:
     d3 = (z2-z1)*(z2-z1)
     distance = math.sqrt(d1+d2+d3)
     return distance
-#print(distance_points(0, 0, 0, 6, 0, 0))
-#=============================== end of problem 15 ===========================================
+# print(distance_points(0, 0, 0, 6, 0, 0))
